@@ -14,7 +14,7 @@ export default () => {
     <>
       <Navbar setResults={setResults}/>
       <div className={classnames('h-100','d-flex','flex-column','align-items-center', 'justify-content-center')}>
-        <Results exchangeResults = {exchangeResults}/>
+        <Results exchangeResults = {exchangeResults} />
       </div>
     </>
   );

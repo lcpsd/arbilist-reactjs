@@ -6,15 +6,19 @@ import axios from 'axios'
 
 function Navbar(props) {
 
+    const coinsOptions = ['ETH','LTC','NEO','XTZ','XRP','LINK','BCH','ADA','CRO','BNB','EOS','XLM','TRX','XMR','ATOM','NEO','MIOTA','VET','HT','DASH','ETC','ZEC','MKR','ONT','ZRX','SNX','BAT','DAI','COMP','THETA','EWT','UMA','WAVES','OKB','REP','DCR','LSK','NANO','']
+
     const search = () => {
         const symbol = (document.getElementById('coin').value).toUpperCase() + '/BTC'
         const quantity = parseFloat(document.getElementById('quantity').value)
         
-        axios.post('/public/exchange/search', 
+        console.log(symbol)
+
+        /*axios.post('/public/exchange/search', 
         {symbol: symbol, btcQty: quantity})
         .then(callResult => {
             props.setResults(callResult.data)
-        })
+        })*/
     }
 
   return (
@@ -26,7 +30,9 @@ function Navbar(props) {
         <div className={classnames('collapse', 'navbar-collapse')} id="menu">
             <ul className={classnames('navbar-nav', 'ml-auto', 'd-flex')}>
                 <li className={classnames('nav-item')}>
-                    <input className={classnames('form-control','bg-yellow', 'border-0','rounded-0', 'text-black', 'input-navbar')} placeholder="COIN" id="coin"></input>
+                    <select className={classnames('form-control','bg-yellow', 'border-0','rounded-0', 'text-black', 'input-navbar')} placeholder="COIN" id="coin">
+                        {coinsOptions.map(coin => <option className="bg-dark-blue text-light">{coin}</option>)}
+                    </select>
                 </li>
                 <li className="nav-item">
                     <input className={classnames('form-control', 'bg-blue', 'border-0', 'rounded-0','text-black', 'input-navbar')} placeholder="BTC Qty" id="quantity" type="number"></input>
