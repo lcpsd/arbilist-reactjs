@@ -24,7 +24,7 @@ body{
   margin: 0;
 }
 
-.w-100{
+.w100{
   width: 100vw !important;
 }
 
@@ -92,11 +92,19 @@ body{
   border-radius: 5px;
 }
 
-.bg-green{
+.bg-green, .bg-green:focus{
   background-color: var(--green);
 }
 
-.bg-blue{
+.bg-yellow, .bg-yellow:focus{
+  background-color: var(--yellow);
+}
+
+.bg-pink, .bg-pink:focus{
+  background-color: var(--pink);
+}
+
+.bg-blue, .bg-blue:focus{
   background-color: var(--blue);
 }
 
@@ -137,6 +145,10 @@ body{
   border: solid 1px var(--light-blue);
 }
 
+.border-bottom-light-blue{
+  border-bottom: solid 1px var(--light-blue);
+}
+
 .font-size-1-5{
   font-size: 1.5em;
 }
@@ -145,3 +157,15 @@ body{
   color: white;
 }
 
+.text-black, .text-black::placeholder{
+  color: black;
+}
+
+.input-navbar{
+  height: 100%;
+  margin: 0 !important;
+}
+
+.navbar{
+  padding: 0 !important;
+}
