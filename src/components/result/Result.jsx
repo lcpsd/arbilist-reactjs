@@ -10,7 +10,7 @@ function result(props) {
             <p className="col-3 d-flex justify-content-center font-bold">{props.exchange}</p>
             <p className="col-3 d-flex justify-content-center">{props.price}</p>
             <p className="col-3 d-flex justify-content-center">{props.coinsQty}</p>
-            <p className="col-3 d-flex justify-content-center">{props.diff === 0 ? 'Base': props.diff + '%'}</p>
+            <p className="col-3 d-flex justify-content-center">{props.diff === 0 ? '-': props.diff + '%'}</p>
           </div>
         </div>
   )
